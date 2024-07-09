@@ -1,0 +1,98 @@
+@use '/src/variables.scss' as v
+  
+.project 
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
+  .info
+    margin-bottom: 60px
+    .row
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: flex-start
+      margin-bottom: 16px
+      .vertical-line
+        min-width: 3px
+        height: 44px
+        background-color: #70BCAA
+        margin-right: 10px
+      .project-row 
+        flex-grow: 1
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-start
+        .name
+          font-family: 'LeituraNewsRoman3', Avenir
+          font-size: 20px
+          font-weight: 900
+        .personal-project
+          font-size: v.$description-font-size
+        .date
+          font-size: v.$description-font-size
+          font-style: italic
+          text-align: right
+    .video
+      width: 100%
+      position: relative
+      video
+        width: 100%
+        margin-bottom: 16px
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px 0px
+      .play-svg
+        position: absolute
+        left: 35px
+        bottom: 52px
+        width: 24px
+        fill: #a0a0a0
+        z-index: 5
+    .description
+      font-size: v.$description-font-size
+      text-indent: 2em
+      line-height: 1.8
+      margin-bottom: 16px
+    button 
+      display: inline-block
+      font-family: Avenir
+      font-size: 16px
+      font-weight: 600
+      padding: 5px v.$description-font-size
+      border-radius: 4px
+      cursor: pointer
+      transition: all 100ms
+      a 
+        color: #fff
+        text-decoration: none
+    .view-btn 
+      background-color: v.$primary-purple
+      border: 3px solid v.$primary-purple
+      margin-right: 12px
+    .view-btn:hover 
+      background-color: transparent
+      border: 3px solid v.$primary-purple
+      a           
+        color: v.$primary-purple
+    .github-btn 
+      background-color: transparent
+      border: none
+      a       
+        color: v.$primary-purple
+    .github-btn:hover 
+      color: v.$primary-purple
+      background-color: transparent
+      border: none
+      text-decoration: underline
+
+@media only screen and (min-width: 320px) and (max-width: 430px) and (orientation: portrait) 
+  .project 
+    .info
+      .row
+        .project-row 
+          .date
+            white-space: nowrap
+      .video
+        .play-svg
+          display: none

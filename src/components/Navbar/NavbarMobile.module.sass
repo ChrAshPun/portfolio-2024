@@ -1,0 +1,112 @@
+@use '/src/variables.scss' as v
+
+.nav-mobile
+  position: relative
+  height: 100vh
+  background: linear-gradient(180deg, rgba(126,174,234,1) 0%, rgba(112,188,170,1) 100%)
+  background: linear-gradient(180deg, v.$primary-blue 0%, v.$primary-green 100%)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  .section-one
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    padding: 24px
+    .code-svg
+      height: 16px
+      fill: #fff
+      margin-right: 6px
+    p
+      font-size: 16px
+      font-weight: 500
+      color: #fff
+  .section-two
+    padding-left: 24px
+    animation-name: appear
+    animation-duration: 2s
+    animation-timing-function: ease
+    animation-fill-mode: forwards
+    .profile-pic
+      position: relative
+      width: 56px
+      height: 56px
+      background-color: #fff
+      background: rgba(255, 255, 255, 0.50)
+      border-radius: 50%
+      margin-bottom: 18px
+      div
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        width: 46px
+        height: 46px
+        background-color: orange
+        border-radius: 50%
+        object-fit: cover
+        overflow: hidden
+        img
+          position: absolute
+          top: 67%
+          left: 50%
+          transform: translate(-50%,-50%)
+          width: 54px
+    h6
+      font-size: 38px
+      font-weight: 600
+      color: #fff
+      line-height: 0.9
+      margin: 0 0 14px 0
+    p
+      font-size: 16px
+      font-weight: 500
+      color: #fff
+      margin: 0 0 18px 0
+    div
+      a
+        .email-svg, .linkedin-svg, .github-svg
+          height: 24px
+          margin-right: 10px
+          fill: #fff
+          cursor: pointer
+      a
+        .email-svg:hover, .linkedin-svg:hover, .github-svg:hover
+          fill: rgba(255, 255, 255, 0.50)
+  div:nth-child(3)
+    height: 46px
+  .arrow-down-svg
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translateX(-50%)
+    width: 28px
+    height: 28px
+    fill: rgba(255, 255, 255, 0.80)
+    background: rgba(0, 0, 0, 0.15)
+    padding: 10px
+    border-radius: 50%
+    margin-bottom: 26px
+    animation: bounce
+    animation-delay: 2s
+    animation-duration: 1s
+    animation-timing-function: ease
+    animation-fill-mode: forwards
+    animation-iteration-count: infinite
+
+@keyframes appear 
+  0%   
+    margin-top: 0px
+    opacity: 0
+  100% 
+    margin-top: -56px
+    opacity: 1
+
+@keyframes bounce
+  0%
+    margin-bottom: 26px
+  50%
+    margin-bottom: 20px
+  100%
+    margin-bottom: 26px

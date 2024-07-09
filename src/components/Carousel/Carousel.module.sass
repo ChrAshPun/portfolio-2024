@@ -1,0 +1,77 @@
+@use '/src/variables.scss' as v
+  
+.carousel 
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 20px
+  .slides 
+    position: relative
+    width: 100%
+    height: 353px
+    max-height: 448px
+    overflow: hidden
+    margin-bottom: 20px
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px
+    .foreground 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: #fcfcfc
+      opacity: 1
+      cursor: pointer
+      z-index: 10
+      .slide:hover 
+        .tag 
+          left: 0
+      .slide 
+        width: 100%
+        height: 100%
+        img 
+          width: 100%
+        .tag 
+          position: absolute
+          left: -140px
+          bottom: 40px
+          width: 80px
+          text-align: right
+          font-size: 18px
+          font-weight: 600
+          color: #fff
+          padding: 8px 20px 8px 40px
+          transition: all 200ms
+        .blue 
+          background-color: v.$primary-purple
+  .carousel-indicators 
+    width: 130px
+    height: 12px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    z-index: 10
+    .circle 
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      cursor: pointer
+      transition: all 200ms
+    .blue-circle 
+      border: 1px solid v.$primary-purple
+    .active-blue-circle 
+      background-color: v.$primary-purple
+      border: 1px solid v.$primary-purple
+
+@media only screen and (min-width: 320px) and (max-width: 430px) and (orientation: portrait) 
+  .carousel 
+    .slides  
+      max-height: 166px 
+      .foreground 
+        .slide
+          .tag 
+            left: -120px
+            bottom: 20px
+            width: 60px
+

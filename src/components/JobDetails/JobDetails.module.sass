@@ -1,0 +1,70 @@
+@use '/src/variables.scss' as v
+
+section
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
+  .column
+    .row
+      display: flex
+      flex-direction: row
+      .vertical-line 
+        min-width: 3px
+        height: 44px
+        background-color: v.$primary-green
+        margin-right: 10px
+      .info
+        flex-grow: 1
+        margin-bottom: 16px
+        .first-row 
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          align-items: flex-end
+          .position 
+            font-family: 'LeituraNewsRoman3', Avenir
+            font-size: v.$title-font-size
+            font-weight: 900
+          .location 
+            display: flex
+            flex-direction: row
+            justify-content: flex-end
+            align-items: center
+            .location-svg 
+              height: 18px
+              fill: v.$primary-green
+              margin-right: 6px
+            p 
+              font-size: 18px
+              font-weight: 600
+        .second-row 
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          align-items: flex-end
+          .company 
+            font-size: 18px
+            font-weight: 400
+          .datesOfEmployment 
+            font-size: 18px
+            font-style: italic
+  .description 
+    font-size: v.$description-font-size
+    text-indent: 2em
+    line-height: 1.8
+    padding-bottom: 60px
+
+@media only screen and (min-width: 320px) and (max-width: 430px) and (orientation: portrait) 
+  section
+    .column
+      .row
+        .info
+          .first-row 
+            align-items: flex-start
+            .position
+              max-width: 200px
+            .location
+              p
+                white-space: nowrap

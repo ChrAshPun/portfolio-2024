@@ -1,0 +1,11 @@
+@use '/src/variables.scss' as v
+
+.banner
+  height: 80px
+  z-index: -5
+  background: linear-gradient(90deg, v.$banner-blue 0%, v.$banner-purple 50%, v.$banner-green 100%)
+
+@media only screen and (min-width: 320px) and (max-width: 430px) and (orientation: portrait) 
+  .banner 
+    height: 60px 
+    background: linear-gradient(90deg, v.$primary-blue 0%, v.$primary-green 100%)

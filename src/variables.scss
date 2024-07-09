@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'LeituraNewsRoman3';
+  src: url('/src/assets/fonts/LeituraNewsRoman3.woff2') format('woff2'), 
+       url('/src/assets/fonts/LeituraNewsRoman3.woff') format('woff')
+}
+
+$title-font-size: 20px;
+$description-font-size: 18px;
+$primary-black: #404040;
+// $primary-blue: #609CE6;
+$primary-blue: #4196ff;
+$primary-purple: #9356C7;
+$primary-green: #31ba9a;
+$banner-blue: #7EAEEA;
+$banner-purple: #A377C9;
+$banner-green: #70BCAA;
+$icon-gray: #969696;
