@@ -117,10 +117,12 @@ const Main = ({ windowWidth }) => {
 
   return (
     <div className={styles.main}>
-      <Sidebar 
-        isCollapsed={sidebarCollapsed === true}
-        toggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)} 
-        />
+      { windowWidth <= 480 ? null :       
+        <Sidebar 
+          isCollapsed={sidebarCollapsed === true}
+          toggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)} 
+        /> 
+      }
       <WorkExperience 
         JobPositions={JobPositions}
         ITCertifications={ITCertifications}

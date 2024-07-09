@@ -16,8 +16,8 @@ function App() {
   
   return (
     <>
-      { windowWidth <= 400 ? <NavbarMobile/> : <Navbar/> }
-      { windowWidth <= 400 ? null :<Banner/> }
+      { windowWidth <= 480 ? <NavbarMobile/> : <Navbar/> }
+      { windowWidth <= 480 ? null :<Banner/> }
       <Main windowWidth={windowWidth} />
       <Banner/>
     </>

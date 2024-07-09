@@ -12,7 +12,7 @@ const JobCmp = memo(({ jobinfo, isCollapsed }) => <Job jobinfo={jobinfo} isColla
 const WorkExperience = ({ JobPositions, ITCertifications, PersonalProjects, isCollapsed, windowWidth }) => {
   return (
     <div className={styles['right-section']}>
-      { windowWidth <= 400 ? <WorkExperienceTitle/> : null }
+      { windowWidth <= 480 ? <WorkExperienceTitle/> : null }
       <JobCmp jobinfo={JobPositions.FingerprintJS} />
       <PersonalProjectCmp project={PersonalProjects.DailyLanguage} isCollapsed={isCollapsed}/>
       <PersonalProjectCmp project={PersonalProjects.ITBlog} isCollapsed={isCollapsed}/>
